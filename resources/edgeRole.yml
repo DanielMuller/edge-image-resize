@@ -1,0 +1,34 @@
+Type: AWS::IAM::Role
+Properties:
+  Path: /service-role/
+  RoleName: ${self:service}-EdgeRole
+  AssumeRolePolicyDocument:
+    Version: '2012-10-17'
+    Statement:
+      - Effect: Allow
+        Principal:
+          Service:
+            - lambda.amazonaws.com
+            - edgelambda.amazonaws.com
+        Action: sts:AssumeRole
+  Policies:
+    - PolicyName: ${self:service}-EdgeLogsPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource:
+              - "arn:aws:logs:*:*:*"
+    - PolicyName: ${self:service}-EdgeS3AccessPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:PutObject
+            Resource: arn:aws:s3:::${self:custom.stage.bucket}/*

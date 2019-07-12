@@ -1,0 +1,4 @@
+handler: services/viewer-request.handler
+name: ${self:service}-viewer-request
+memorySize: 128
+timeout: 5

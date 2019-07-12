@@ -1,0 +1,7 @@
+profile: aws-cli-profile # To be replaced
+region: us-east-1
+bucket: MY_S3_BUCKET # To be replaced
+lambda:
+  memorySize: 1024
+  timeout: 30
+  logRetention: "1"

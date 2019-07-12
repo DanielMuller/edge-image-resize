@@ -1,0 +1,4 @@
+handler: services/origin-response.handler
+name: ${self:service}-origin-response
+memorySize: 2048
+timeout: 30

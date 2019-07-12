@@ -1,0 +1,40 @@
+{
+  "name": "imgResize",
+  "version": "0.0.1",
+  "description": "Change name and description",
+  "main": "handler.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint .",
+    "lintfix": "eslint --fix",
+    "deploy": "npm run lint && sls -s production deploy",
+    "dev": "npm run lint && sls deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "aws-sdk": "^2.492.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-source-map-support": "^2.1.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.14",
+    "serverless": "^1.47.0",
+    "serverless-pseudo-parameters": "^2.4.0",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.35.3",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "lambda-log": "^2.3.0",
+    "querystring": "^0.2.0",
+    "sharp": "^0.22.1"
+  }
+}
