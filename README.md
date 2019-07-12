@@ -23,5 +23,5 @@ or
 Edit `events/origin-response.json` (or create a new event)
 
 ```
-sls invoke local -f OriginResponse -p events/origin-response.json
+sls invoke local -f Origin-response -p events/origin-response.json
 ```
