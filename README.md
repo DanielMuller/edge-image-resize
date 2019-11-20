@@ -1,3 +1,5 @@
+[thumbnail-creation](https://github.com/DanielMuller/thumbnail-creation) is another alternative using API Gateway instead of Lambda@Edge.
+
 # Lambda@Edge Image resizer
 
 Resize images on Lambda@Edge. Images are hosted on S3, and served via Cloudfront.
